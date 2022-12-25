@@ -47,7 +47,7 @@ const startHttpRedirect = (host, port) => {
     }
   ).listen(host || '0.0.0.0', port, (token) => {
     if (token) {
-      log.gne(`Http redirect server initialized at ${new Date().toISOString()} and listening on port ${port}`)
+      log.success(`Http redirect server initialized at ${new Date().toISOString()} and listening on port ${port}`)
     } else {
       throw new Error(`Failed to start server on port ${port}`)
     }
@@ -116,7 +116,7 @@ export async function startServer (config) {
     app.any('/*', createNotFoundHandler(config))
     app.listen(config.host || '0.0.0.0', config.port, (token) => {
       if (token) {
-        log.gne(`Server initialized at ${new Date().toISOString()} and listening on port ${port}`)
+        log.success(`Server initialized at ${new Date().toISOString()} and listening on port ${port}`)
       } else {
         throw new Error(`Failed to start server on port ${port}`)
       }

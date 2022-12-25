@@ -15,7 +15,7 @@ export default async function (config) {
                 `Exception origin: ${origin}`)
     })
 
-  log.gne('Starting Spliffy!')
+  log.success('Starting Spliffy!')
   const configWithDefaults = await initConfig(config)
   return startServer(configWithDefaults).catch(e => {
     log.error(randomNonsense(), 'Exception during startup:', e)

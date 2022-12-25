@@ -41,7 +41,7 @@ export default {
   info () {
     callLog('INFO', 'info', console.info, [...arguments])
   },
-  gne () {
+  success () {
     callLog('GOOD NEWS EVERYONE!', 'info', console.info, [...arguments])
   },
   access () {
